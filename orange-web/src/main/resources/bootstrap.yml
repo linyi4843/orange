@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: orange-web
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        serviceName: orange-web
+      config:
+        enabled: true
+        format: yaml
+        prefix: config
+        profile-separator: ':'
+        data-key: data
+
+# consul内配置
+#
+#server:
+#  port: 8700
+#
+#hello:
+#  world: hello world!
+#
+#spring:
+#  datasource:
+#    druid:
+#      url: jdbc:mysql://120.79.238.66:3306/linyi?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#      username: root
+#      password: 123456
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      initial-size: 3
+#      min-idle: 3
+#      max-active: 60
+#      max-wait: 30000
+#      validationQuery: select 1
+#      test-on-borrow: false
+#      test-while-idle: true
+#      test-on-return: false
+#
+#mybatis-plus:
+#  mapper-locations: classpath:/mapper/*Mapper.xml
+#  check-config-location: true
+#  typeAliasesPackage: com.linyi.mall.orange.common.entity
+#  global-config:
+#    sql-parser-cache: true
+#    db-config:
+#      id-type: auto
+#      field-strategy: not_null
+#      table-underline: true
+#      table-prefix: ly
+#      logic-delete-value: 1
+#      logic-not-delete-value: 0
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    cache-enabled: false
+#    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+#    jdbc-type-for-null: 'null'
