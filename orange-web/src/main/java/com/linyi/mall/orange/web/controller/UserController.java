@@ -29,7 +29,7 @@ public class UserController {
 
     @RequestMapping("/h")
     public R getHello(@RequestParam(defaultValue = "1", required = false) Integer id) {
-        return R.ok(service.getOne(new QueryWrapper<User>().eq("id",id)));
+        return R.ok(service.getOne(new QueryWrapper<User>().eq("id",id),true));
     }
 
 }
